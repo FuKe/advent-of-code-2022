@@ -22,15 +22,14 @@ fun main() {
     println("Result part two: $resultPartTwo")
 }
 
-private fun partOne(puzzleInput: List<String>): Int {
-    return puzzleInput.sumOf {
+private fun partOne(puzzleInput: List<String>): Int =
+    puzzleInput.sumOf {
         val left = it.substring(0, it.length / 2)
         val right = it.substring(it.length / 2)
 
         val inBoth: Char = left.filter { char -> char in right }[0]
         calculatePriority(inBoth)
     }
-}
 
 private fun partTwo(puzzleInput: List<String>): Int {
     val currentGroup = mutableListOf<String>()
@@ -39,10 +38,7 @@ private fun partTwo(puzzleInput: List<String>): Int {
         currentGroup += s
 
         if ((index + 1) % 3 == 0) {
-            val first = currentGroup[0]
-            val second = currentGroup[1]
-            val third = currentGroup[2]
-
+            val (first, second, third) = currentGroup.slice(0..2)
             val inAll: Char = first.filter { char -> char in second && char in third }[0]
             sumPriorities += calculatePriority(inAll)
 
