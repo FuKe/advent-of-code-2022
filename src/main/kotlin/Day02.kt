@@ -20,7 +20,7 @@ fun main() {
     println("Result part two: $resultPartTwo")
 }
 
-fun partOne(puzzleInput: List<Pair<String, String>>): Int =
+private fun partOne(puzzleInput: List<Pair<String, String>>): Int =
     puzzleInput.sumOf {
         val myHand = RockPaperScissors.valueOf(it.second)
         when {
@@ -30,7 +30,7 @@ fun partOne(puzzleInput: List<Pair<String, String>>): Int =
         }
     }
 
-fun partTwo(puzzleInput: List<Pair<String, String>>): Int {
+private fun partTwo(puzzleInput: List<Pair<String, String>>): Int {
     val resultCodeMap = mapOf("X" to ResultCode.LOSS, "Y" to ResultCode.DRAW, "Z" to ResultCode.WIN)
     return puzzleInput.sumOf {
         val resultCode = resultCodeMap[it.second]!!
@@ -42,7 +42,7 @@ fun partTwo(puzzleInput: List<Pair<String, String>>): Int {
     }
 }
 
-fun convertPuzzleInput(rawPuzzleInput: List<String>): List<Pair<String, String>> =
+private fun convertPuzzleInput(rawPuzzleInput: List<String>): List<Pair<String, String>> =
     rawPuzzleInput.mapNotNull {
         if (it.isEmpty()) {
             null

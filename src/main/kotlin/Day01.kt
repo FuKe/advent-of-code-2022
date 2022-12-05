@@ -4,7 +4,7 @@ fun main() {
     partTwo(puzzleInput)
 }
 
-fun partOne(puzzleInput: List<String>) {
+private fun partOne(puzzleInput: List<String>) {
     var highestSum = 0
     var currentSum = 0
 
@@ -22,7 +22,7 @@ fun partOne(puzzleInput: List<String>) {
     println("Part1 answer: $highestSum")
 }
 
-fun partTwo(puzzleInput: List<String>) {
+private fun partTwo(puzzleInput: List<String>) {
     val sums = mutableListOf<Int>()
 
     var currentSum = 0
