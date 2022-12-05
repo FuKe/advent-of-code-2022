@@ -1,5 +1,5 @@
-fun main(args: Array<String>) {
-    val puzzleInput: List<String> = readInput("Day01Part1.txt")
+fun main() {
+    val puzzleInput: List<String> = readInput("Day01.txt")
     partOne(puzzleInput)
     partTwo(puzzleInput)
 }
