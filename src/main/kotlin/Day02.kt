@@ -1,7 +1,7 @@
-const val DRAW_SCORE = 3
-const val WIN_SCORE = 6
+private const val DRAW_SCORE = 3
+private const val WIN_SCORE = 6
 
-val testInput = listOf("A Y", "B X", "C Z")
+private val testInput = listOf("A Y", "B X", "C Z")
 
 fun main() {
     val testPuzzleInput = convertPuzzleInput(testInput)
